@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#121212"
-    tools:context=".MainActivity">
+    tools:context=".RegistrationActivity">
 
     <TextView
-        android:id="@+id/authhorizationTitle"
+        android:id="@+id/registrartionTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:fontFamily="@font/montserrat_medium"
-        android:text="Authorization"
+        android:text="Registration"
         android:textColor="#FFFFFF"
         android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,27 +24,26 @@
         android:id="@+id/loginTextView"
         android:layout_width="wrap_content"
         android:layout_height="35dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/montserrat_light"
         android:text="Login"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/authhorizationTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/registrartionTitle" />
 
     <EditText
-        android:id="@+id/loginInputAuth"
+        android:id="@+id/loginInputRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:backgroundTint="#D499EF"
         android:ems="10"
         android:fontFamily="@font/montserrat_light"
         android:inputType="textPersonName"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginTextView" />
 
@@ -52,57 +51,83 @@
         android:id="@+id/passwordTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/montserrat_light"
         android:text="Password"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginInputAuth" />
+        app:layout_constraintTop_toBottomOf="@+id/loginInputRegister" />
 
     <EditText
-        android:id="@+id/passwordInputAuth"
+        android:id="@+id/passwordInputRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:backgroundTint="#D499EF"
         android:ems="10"
         android:fontFamily="@font/montserrat_light"
         android:inputType="textPassword"
-        android:textColor="#FBFBFB"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordTextView" />
 
+    <TextView
+        android:id="@+id/repeatPasswordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat_light"
+        android:text="Repeat password"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordInputRegister" />
+
+    <EditText
+        android:id="@+id/repeatPasswordInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#D499EF"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_light"
+        android:inputType="textPassword"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repeatPasswordTextView" />
+
     <Button
-        android:id="@+id/sginInButton"
+        android:id="@+id/sginUpButton"
         android:layout_width="216dp"
         android:layout_height="72dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button_sample"
         android:fontFamily="@font/montserrat_semibold"
         android:padding="10dp"
-        android:text="Sgin in"
+        android:text="Sgin up"
         android:textAllCaps="false"
         android:textColor="#D499EF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordInputAuth" />
+        app:layout_constraintTop_toBottomOf="@+id/repeatPasswordInput" />
 
     <TextView
-        android:id="@+id/registrationText"
+        android:id="@+id/backToSginIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/montserrat_medium"
-        android:text="Registration"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Back to sgin in"
         android:textColor="#D499EF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sginInButton" />
+        app:layout_constraintTop_toBottomOf="@+id/sginUpButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
