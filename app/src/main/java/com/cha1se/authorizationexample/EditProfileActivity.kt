@@ -15,6 +15,7 @@ class EditProfileActivity : AppCompatActivity() {
     public lateinit var birthInput: EditText
     public lateinit var hobbyInput: EditText
     public lateinit var saveBtn: Button
+    public lateinit var backBtn: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,10 +25,12 @@ class EditProfileActivity : AppCompatActivity() {
         birthInput = findViewById(R.id.birthInput)
         hobbyInput = findViewById(R.id.hobbyInput)
         saveBtn = findViewById(R.id.saveButton)
+        backBtn = findViewById(R.id.backToProfile)
 
         nameInput.hint = intent.getStringExtra("name")
         birthInput.hint = intent.getStringExtra("birth")
         hobbyInput.hint = intent.getStringExtra("hobby")
+        var login = intent.getStringExtra("login").toString()
 
         saveBtn.setOnClickListener(View.OnClickListener {
 
@@ -35,7 +38,6 @@ class EditProfileActivity : AppCompatActivity() {
 
                 val db = DBHelper(this, null)
 
-                var login = intent.getStringExtra("login").toString()
                 var password = intent.getStringExtra("password").toString()
                 val name = nameInput.text.toString()
                 val birth = birthInput.text.toString()
@@ -73,6 +75,12 @@ class EditProfileActivity : AppCompatActivity() {
                     Toast.makeText(this, "Information in not full", Toast.LENGTH_SHORT).show()
                 }
             }
+        })
+
+        backBtn.setOnClickListener(View.OnClickListener {
+            intent = Intent(this, ProfileActivity::class.java)
+            intent.putExtra("login", login)
+            startActivity(intent)
         })
 
     }

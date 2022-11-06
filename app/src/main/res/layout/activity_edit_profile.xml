@@ -93,4 +93,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hobbyInput" />
 
+    <Button
+        android:id="@+id/backToProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#121212"
+        android:fontFamily="@font/montserrat"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
